@@ -1,0 +1,52 @@
+agm-map {
+    max-height: 950px;
+    height: 950px;
+    position:relative;
+}
+
+div#sideBar {
+    position: absolute;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    top: 30px;
+    left: 50px;
+    margin: 0 auto;
+    background-color: lightslategray;
+    transition: all 1s;
+}
+
+div#burgerBar {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 20px;
+    left: 20px;
+    margin: 0 auto;
+    transform: rotate(90deg);
+    transition: all 0.5s;
+}
+
+div#burgerBar:hover {
+    transform: rotate(180deg);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+hr {
+    background-color: lightslategray;
+    height: 8px;
+    width: 100%;
+    border: none;
+}
+
+i#close {
+    font-size: 30px;
+    transition: all 1s;
+}
+
+i#close:hover {
+    cursor: pointer;
+    transform: rotate(360deg)
+}
