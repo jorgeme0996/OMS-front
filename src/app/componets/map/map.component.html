@@ -1,7 +1,7 @@
-<div id="map">
+<!-- <div id="map">
     <agm-map [zoom]="zoom" [styles]="styles" [latitude]="latitude" [longitude]="longitude" [streetViewControl]="false">
     </agm-map>
-</div>
+</div> -->
 
 <div (click)="showSideBar = !showSideBar" (click)="showBurgerBar = !showBurgerBar" id="burgerBar" *ngIf="showBurgerBar">
     <hr class="line">
@@ -11,10 +11,10 @@
 
 <div class="animated fadeIn" id="sideBar" *ngIf="showSideBar">
     <i class="fas fa-times-circle" id="close" (click)="showSideBar = !showSideBar" (click)="showBurgerBar = !showBurgerBar" ></i>
-    <h3 id="logedName">Nombre nombre</h3>
-    <h3 id="mapLinks">Proveedores</h3>
-    <h3 id="mapLinks">Soporte</h3>
-    <h3 id="mapLinks">Tutoriales</h3>
-    <h3 id="mapLinks">Acerca de</h3>
-    <h3 id="mapLinks">Cerrar sesión</h3>
+    <h2 id="logedName">Nombre nombre</h2>
+    <h2 class="mapLinks">Proveedores</h2>
+    <h2 class="mapLinks">Soporte</h2>
+    <h2 class="mapLinks">Tutoriales</h2>
+    <h2 class="mapLinks">Acerca de</h2>
+    <h2 class="mapLinks">Cerrar sesión</h2>
 </div>
