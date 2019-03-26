@@ -15,6 +15,9 @@ div#sideBar {
     margin: 0 auto;
     background-color: lightslategray;
     transition: all 1s;
+    width: 250px;
+    height: 600px;
+    color: white;
 }
 
 div#burgerBar {
@@ -26,6 +29,11 @@ div#burgerBar {
     margin: 0 auto;
     transform: rotate(90deg);
     transition: all 0.5s;
+}
+
+h2.mapLinks, h2#logedName {
+    padding-top: 10px;
+    padding-bottom: 10px; 
 }
 
 div#burgerBar:hover {
@@ -44,9 +52,11 @@ hr {
 i#close {
     font-size: 30px;
     transition: all 1s;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 i#close:hover {
     cursor: pointer;
-    transform: rotate(360deg)
+    transform: rotate(180deg);
 }
