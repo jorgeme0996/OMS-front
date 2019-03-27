@@ -1,5 +1,6 @@
 <div id="map">
     <agm-map [zoom]="zoom" [styles]="styles" [latitude]="latitude" [longitude]="longitude" [streetViewControl]="false">
+        <agm-marker *ngFor="let marker of markers" [iconUrl]="'/assets/img/gota1.svg'" [latitude]="marker.latitude" [longitude]="marker.longitude"></agm-marker>
     </agm-map>
 </div>
 
@@ -12,9 +13,9 @@
 <div class="animated fadeIn" id="sideBar" *ngIf="showSideBar">
     <i class="fas fa-times-circle" id="close" (click)="showSideBar = !showSideBar" (click)="showBurgerBar = !showBurgerBar" ></i>
     <h2 id="logedName">Nombre nombre</h2>
-    <h2 class="mapLinks">Proveedores</h2>
-    <h2 class="mapLinks">Soporte</h2>
-    <h2 class="mapLinks">Tutoriales</h2>
-    <h2 class="mapLinks">Acerca de</h2>
-    <h2 class="mapLinks">Cerrar sesión</h2>
+    <h2 class="mapLinks"><i class="iconSideBar fas fa-business-time"></i> Proveedores</h2>
+    <h2 class="mapLinks"><i class="iconSideBar fas fa-cogs"></i> Soporte</h2>
+    <h2 class="mapLinks"><i class="iconSideBar fas fa-book-reader"></i> Tutoriales</h2>
+    <h2 class="mapLinks"><i class="iconSideBar fas fa-info"></i> Acerca de</h2>
+    <h2 class="mapLinks"><i class="iconSideBar fas fa-sign-out-alt"></i> Cerrar sesión</h2>
 </div>

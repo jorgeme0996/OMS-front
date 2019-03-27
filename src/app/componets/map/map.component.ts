@@ -10,6 +10,14 @@ export class MapComponent {
   latitude = 20.155750;
   longitude = -100.557466; 
   zoom = 5; 
+
+  markers = [
+    { latitude: 20.589653, longitude: -100.389526 },
+    { latitude: 20.586222, longitude: -100.388849},
+    { latitude: 19.418090, longitude: -99.174638},
+    {latitude: 19.420073, longitude: -99.176440},
+    {latitude: 21.143755, longitude: -86.823113}
+  ];
   
   showSideBar = false;
   showBurgerBar = true;
