@@ -39,3 +39,13 @@ div.circule{
 .fadeIn {
     animation-name: fadeIn;
 }
+
+.padding-top-btm {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.margin-top-btm {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

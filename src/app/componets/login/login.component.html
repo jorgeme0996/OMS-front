@@ -1,32 +1,32 @@
-<div class="login-wrap">
-  <div class="login-html">
-    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Inicia</label>
-    <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Restablecer Contraseña</label>
-    <div class="login-form">
-      <div class="sign-in-htm">
-        <div class="group">
-          <label for="user" class="label">Usuario</label>
-          <input id="user" type="text" class="input" placeholder="usuario">
-        </div>
-        <div class="group">
-          <label for="pass" class="label">Contraseña</label>
-          <input id="pass" type="password" class="input" data-type="password" placeholder="contraseña">
-        </div>
-        <div class="group">
-          <input type="submit" class="button" value="Iniciar">
-        </div>
-        <div class="hr"></div>
-      </div>
-      <div class="for-pwd-htm">
-        <div class="group">
-          <label for="user" class="label">Usuario</label>
-          <input id="user" type="text" class="input">
-        </div>
-        <div class="group">
-          <input type="submit" class="button" value="Contraseña Nueva">
-        </div>
-        <div class="hr"></div>
-      </div>
-    </div>
+<div id="contLogin" *ngIf="showLogin">
+  <div id="login">
+    <h1 class="padding-top-btm">
+      Bienvenido a: <br> <small> Oil Managment System</small>
+    </h1>
+
+    <label class="padding-top-btm" for="usernameInput">Usuario:</label>
+    <input class="loginInput" id="usernameInput" type="text">
+
+    <label class="padding-top-btm" for="passwordInput">Contraseña:</label>
+    <input class="loginInput" id="passwordInput" type="password">
+
+    <a (click)="showResPass = !showResPass" (click)="showLogin = !showLogin">¿Olvidaste tu contraseña?</a>
+
+    <button id="btn-login">Ingresar</button>
   </div>
 </div>
+
+<div id="contLogin" *ngIf="showResPass">
+    <div id="login">
+      <h2 class="padding-top-btm">
+        Ingresa tu usuario: <br> <small>Se te enviara un correo <br> electronico para reestablecer <br> tu contraseña</small>
+      </h2>
+  
+      <label class="padding-top-btm" for="usernameInput">Usuario:</label>
+      <input class="loginInput" id="usernameInput" type="text">
+  
+      <a (click)="showLogin = !showLogin" (click)="showResPass = !showResPass">Entrar</a>
+  
+      <button id="btn-login">Enviar</button>
+    </div>
+  </div>

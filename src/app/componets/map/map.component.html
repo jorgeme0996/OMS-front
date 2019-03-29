@@ -1,8 +1,8 @@
-<div id="map">
+<!-- <div id="map">
     <agm-map [zoom]="zoom" [styles]="styles" [latitude]="latitude" [longitude]="longitude" [streetViewControl]="false">
         <agm-marker *ngFor="let marker of markers" [iconUrl]="'/assets/img/gota1.svg'" [latitude]="marker.latitude" [longitude]="marker.longitude"></agm-marker>
     </agm-map>
-</div>
+</div> -->
 
 <div (click)="showSideBar = !showSideBar" (click)="showBurgerBar = !showBurgerBar" id="burgerBar" *ngIf="showBurgerBar">
     <hr class="line">

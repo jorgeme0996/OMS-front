@@ -13,13 +13,15 @@ import { AppComponent } from './app.component';
 import { PermisoCreComponent } from './componets/shared/permiso-cre/permiso-cre.component';
 import { MapComponent } from './componets/map/map.component';
 import { NotFoundComponent } from './componets/shared/not-found/not-found.component';
+import { LoginComponent } from './componets/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PermisoCreComponent,
     MapComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
