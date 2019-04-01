@@ -1,3 +1,4 @@
+
 div#contLogin{
     display: flex;
     justify-content: center;
@@ -13,17 +14,24 @@ div#login {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     padding-left: 30px;
     padding-right: 30px;
-    background-color: cadetblue;
+    background-color: rgb(34, 34, 34);
+  /*background-color: #fefefe;*/
+    color: white;
+    border-radius: 8px;
+    font-family: Constantia;
 }
 
 button#btn-login {
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: dodgerblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #004ec4;
     color: white;
     border: none;
-    padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 2px #296bce solid;
+  text-align: center;
 }
 
 button#btn-login:hover {
@@ -34,6 +42,8 @@ button#btn-login:hover {
 input.loginInput {
     border-radius: 10px;
     padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 2px white solid;
 }
 
@@ -52,6 +62,4 @@ a:hover {
     cursor: pointer;
 }
 
-small {
-    color: white;
-}
+
