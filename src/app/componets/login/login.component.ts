@@ -1,18 +1,28 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   showLogin:boolean = true;
   showResPass:boolean = false;
   
-  constructor() { }
+  constructor(private auth: AuthService) { }
 
-  ngOnInit() {
+  login(user, pass){
+    let userTryLogin = {
+      username: user,
+      password: pass
+    }
+
+    this.auth.login(userTryLogin)
+      .subscribe((token: any) => {
+        console.log(token);
+      })
   }
-
 }
