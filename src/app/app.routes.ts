@@ -7,6 +7,6 @@ export const ROUTES: Routes = [
     {path: 'map', component: MapComponent},
     {path: 'login', component: LoginComponent},
     {path: '404', component: NotFoundComponent},
-    {path:'**', component: NotFoundComponent},
-    {path:'', pathMatch:'full', redirectTo:'login'}
+    {path:'**', component: LoginComponent},
+    {path:'', pathMatch:'full', redirectTo:'404'}
 ]
