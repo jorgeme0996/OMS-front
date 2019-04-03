@@ -4,6 +4,10 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 
+//Importar Servicios
+import { AuthGuard } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
+
 
 // Importar Rutas
 import { ROUTES } from './app.routes';
@@ -31,7 +35,7 @@ import { LoginComponent } from './componets/login/login.component';
       apiKey: "AIzaSyBgmI1bWkGcebNPjwZpxSpCQ2yCWDGSJ1I" 
     })
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
