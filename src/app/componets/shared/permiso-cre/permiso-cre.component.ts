@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PermisoCreService } from '../../../services/permiso-cre.service';
 
 @Component({
   selector: 'app-permiso-cre',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PermisoCreComponent implements OnInit {
 
-  constructor() { }
+  permisoCRE:string = '';
+  
+  constructor(private permiso: PermisoCreService) { }
 
   ngOnInit() {
+    
+  }
+
+  getPermiso(){
+    this.permiso.getPermiso()
+      .subscribe((data:any)=>{
+        this.permisoCRE = data;
+        console.log(data)
+      })
   }
 
 }

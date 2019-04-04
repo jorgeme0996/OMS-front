@@ -1,6 +1,6 @@
 <div id="map">
     <agm-map [zoom]="zoom" [styles]="styles" [latitude]="latitude" [longitude]="longitude" [streetViewControl]="false">
-        <agm-marker *ngFor="let marker of markers" [iconUrl]="'/assets/img/gota1.svg'" [latitude]="marker.latitude" [longitude]="marker.longitude"></agm-marker>
+        <agm-marker (markerClick)="goToMenu()" *ngFor="let marker of markers" [iconUrl]="'/assets/img/gota1.svg'" [latitude]="marker.ubicacion.coordenadas.lat" [longitude]="marker.ubicacion.coordenadas.long"></agm-marker>
     </agm-map>
 </div>
 

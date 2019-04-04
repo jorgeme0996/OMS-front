@@ -18,6 +18,8 @@ import { PermisoCreComponent } from './componets/shared/permiso-cre/permiso-cre.
 import { MapComponent } from './componets/map/map.component';
 import { NotFoundComponent } from './componets/shared/not-found/not-found.component';
 import { LoginComponent } from './componets/login/login.component';
+import { SasisopaMenuComponent } from './componets/shared/sasisopa-menu/sasisopa-menu.component';
+import { MenuGasComponent } from './componets/menu-gas/menu-gas.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { LoginComponent } from './componets/login/login.component';
     PermisoCreComponent,
     MapComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    SasisopaMenuComponent,
+    MenuGasComponent
   ],
   imports: [
     BrowserModule,
