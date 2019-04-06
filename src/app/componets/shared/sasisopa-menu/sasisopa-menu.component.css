@@ -40,3 +40,15 @@ div#texto {
 h1 {
     padding-right: 10px;
 }
+
+div.header {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+h2.iconSideBarBack:hover {
+    cursor: pointer;
+    transform: translateX(-10px);
+    transition: 1s all;
+}

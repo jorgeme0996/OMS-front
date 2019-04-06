@@ -10,8 +10,8 @@ export const ROUTES: Routes = [
     {path: 'map', canActivate: [AuthGuard],component: MapComponent},
     {path: 'login', component: LoginComponent},
     {path: '404', component: NotFoundComponent},
-    {path: 'menu', canActivate: [AuthGuard], component: MenuGasComponent},
-    {path: 'SASISOPA/menu', canActivate: [AuthGuard], component: SasisopaMenuComponent},
+    {path: 'menu/:id', canActivate: [AuthGuard], component: MenuGasComponent},
+    {path: 'SASISOPA/menu/:id', canActivate: [AuthGuard], component: SasisopaMenuComponent},
     {path:'**', component: LoginComponent},
     {path:'', pathMatch:'full', redirectTo:'404'}
 ]

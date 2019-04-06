@@ -217,8 +217,8 @@ export class MapComponent implements OnInit {
       })
   }
 
-  goToMenu(){
-    this.router.navigate(['/menu'])
+  goToMenu(id){
+    this.router.navigate(['/menu', id])
   }
 
 }

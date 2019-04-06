@@ -77,3 +77,18 @@ i#close:hover {
     cursor: pointer;
     transform: rotate(360deg);
 }
+
+section#datos {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div#datosGrl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 2rem; 
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    width: 70%;
+}

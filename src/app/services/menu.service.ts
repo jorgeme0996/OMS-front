@@ -4,18 +4,17 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class PermisoCreService {
+export class MenuService {
 
   permisoURL = "http://localhost:3000/station"
 
   constructor(private http: HttpClient) { }
 
-  getPermiso(param){
+  getStation(param){
     const headers = new HttpHeaders({
       'Authorization': localStorage.getItem('Auth')
     });
-    const url = `${this.permisoURL}/${param}/permiso`; 
+    const url = `${this.permisoURL}/${param}`;
     return this.http.get(url, {headers});
   }
-  
 }

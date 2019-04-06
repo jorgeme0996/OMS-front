@@ -15,3 +15,20 @@
     <h2 class="mapLinks"><i class="iconSideBar fas fa-users"></i> Organigrama</h2>
     <h2 class="mapLinks"><i class="iconSideBar fas fa-calendar-alt"></i> Calendario</h2>
 </div>
+
+<section id="datos">
+    <div>
+        <img [src]="station.logo" height="125px" width="250px">
+        <h2>{{station.razonSocial}}</h2>  
+    </div>
+    <div id="datosGrl">
+        <h3>Dirección:</h3>
+        <p> <strong>Calle:</strong> {{station.ubicacion.direccion.calle}} <strong>No.</strong> {{station.ubicacion.direccion.numExt}}</p>
+        <p> <strong>Colonia:</strong> {{station.ubicacion.direccion.colonia}} </p>
+        <p> {{station.ubicacion.direccion.delMun}}, {{station.ubicacion.direccion.estado}} </p>
+    </div>   
+</section>
+
+<section>
+    
+</section>

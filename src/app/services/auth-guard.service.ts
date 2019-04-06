@@ -7,15 +7,16 @@ import { AuthService } from '../services/auth.service';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private router: Router) { }
 
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot){
-    
+    const auth = this.auth.isAuth();
+
     if(this.auth.isAuth()){
-      console.log('Paso el guard')
+      console.log('Paso el guard');
       return true
     } else {
-      console.error("Bloqueado por el guard")
+      console.log('Bloqueado por el guard'); 
       return false
     }
   }

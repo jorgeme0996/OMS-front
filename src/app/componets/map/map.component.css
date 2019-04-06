@@ -1,7 +1,30 @@
 agm-map {
     max-height: 950px;
-    height: 950px;
     position:relative;
+}
+
+@media screen and (max-width: 1600px){
+    agm-map {
+        height: 770px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    agm-map {
+        height: 936px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    agm-map {
+        height: 702px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    agm-map {
+        height: 670px;
+    }
 }
 
 div#sideBar {
