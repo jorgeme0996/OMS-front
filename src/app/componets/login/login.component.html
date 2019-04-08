@@ -14,6 +14,16 @@
     <input class="loginInput" id="passwordInput" type="password" placeholder="Contraseña">
 
     <button id="btn-login">Ingresar</button>
+
+      <label class="padding-top-btm" for="usernameInput">Usuario:</label>
+      <input #userInput class="loginInput" id="username" type="text" placeholder="Usuario">
+
+      <label class="padding-top-btm" for="passwordInput">Contraseña:</label>
+      <input #passInput class="loginInput" id="passwordInput" type="password" placeholder="Contraseña">
+
+      <a (click)="showResPass = !showResPass" (click)="showLogin = !showLogin">¿Olvidaste tu contraseña?</a>
+      
+      <button type="submit" id="btn-login" (click)="login(userInput.value, passInput.value)">Ingresar</button>
   </div>
 </div> 
 
@@ -33,6 +43,18 @@
   
       <button id="btn-login">Enviar</button>
     </div>
-    <br>
+  
+  <div id="login">
+    <h2 class="padding-top-btm">
+      Ingresa tu usuario: <br> <small>Se te enviara un correo <br> electronico para reestablecer <br> tu contraseña</small>
+    </h2>
+
+    <label class="padding-top-btm" for="usernameInput">Usuario:</label>
+    <input class="loginInput" id="usernameRecuperacion" type="text" placeholder="Usuario Registrado">
+
+    <a (click)="showLogin = !showLogin" (click)="showResPass = !showResPass">Entrar</a>
+
+    <button id="btn-login">Enviar</button>
     
   </div>
+</div>

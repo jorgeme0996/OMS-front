@@ -4,6 +4,10 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 
+//Importar Servicios
+import { AuthGuard } from './services/auth-guard.service';
+import { AuthService } from './services/auth.service';
+
 
 // Importar Rutas
 import { ROUTES } from './app.routes';
@@ -19,6 +23,8 @@ import { CalendatrComponent } from './componets/calendatr/calendatr.component';
 import { from } from 'rxjs';
 import { NomIneriorPipe } from './pipes/nom-inerior.pipe';
 
+import { SasisopaMenuComponent } from './componets/shared/sasisopa-menu/sasisopa-menu.component';
+import { MenuGasComponent } from './componets/menu-gas/menu-gas.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,8 @@ import { NomIneriorPipe } from './pipes/nom-inerior.pipe';
     LoginComponent,
     CalendatrComponent,
     NomIneriorPipe,
-    
+    SasisopaMenuComponent,
+    MenuGasComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,7 @@ import { NomIneriorPipe } from './pipes/nom-inerior.pipe';
       apiKey: 'AIzaSyBgmI1bWkGcebNPjwZpxSpCQ2yCWDGSJ1I'
     })
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

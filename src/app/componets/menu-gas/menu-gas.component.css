@@ -1,32 +1,3 @@
-agm-map {
-    max-height: 950px;
-    position:relative;
-}
-
-@media screen and (max-width: 1600px){
-    agm-map {
-        height: 770px;
-    }
-}
-
-@media screen and (max-width: 1024px){
-    agm-map {
-        height: 936px;
-    }
-}
-
-@media screen and (max-width: 768px){
-    agm-map {
-        height: 702px;
-    }
-}
-
-@media screen and (max-width: 425px){
-    agm-map {
-        height: 670px;
-    }
-}
-
 div#sideBar {
     position: absolute;
     padding-left: 30px;
@@ -57,9 +28,20 @@ div#burgerBar {
     transition: all 0.5s;
 }
 
-h2.mapLinks, h2#logedName {
+h2.mapLinks {
     padding-top: 10px;
     padding-bottom: 10px; 
+}
+
+h2.iconSideBarBack {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h2.iconSideBarBack:hover {
+    transform: translate(-18px,0px);
+    cursor: pointer;
+    transition: all 0.5s;
 }
 
 i.iconSideBar {
@@ -94,4 +76,19 @@ i#close {
 i#close:hover {
     cursor: pointer;
     transform: rotate(360deg);
+}
+
+section#datos {
+    padding: 2rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div#datosGrl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 2rem; 
+    background-color: lightsteelblue;
+    border-radius: 10px;
+    width: 70%;
 }

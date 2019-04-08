@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PermisoCreService } from '../../../services/permiso-cre.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-permiso-cre',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PermisoCreComponent implements OnInit {
 
-  constructor() { }
+  permisoCRE:string = '';
+  
+  constructor(private permiso: PermisoCreService, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.getPermiso();
   }
 
+  getPermiso(){
+    const param = this.route.snapshot.paramMap.get('id');
+    console.log(param);
+    this.permiso.getPermiso(param)
+      .subscribe((data:any)=>{
+        this.permisoCRE = data.station.numPermisoCre;
+        console.log(data)
+      })
+  }
 }

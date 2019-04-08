@@ -1,0 +1,34 @@
+<app-permiso-cre></app-permiso-cre>
+<div (click)="showSideBar = !showSideBar" (click)="showBurgerBar = !showBurgerBar" id="burgerBar" *ngIf="showBurgerBar">
+    <hr class="line">
+    <hr class="line">
+    <hr class="line">
+</div>
+
+<div class="animated fadeIn" id="sideBar" *ngIf="showSideBar">
+    <i class="fas fa-times-circle" id="close" (click)="showSideBar = !showSideBar" (click)="showBurgerBar = !showBurgerBar" ></i>
+    <h2 (click)="goToMap()" class="iconSideBarBack"><i class="iconSideBar fas fa-arrow-left"></i>Regresar al mapa</h2>
+    <h2 (click)="goToSASISOPA()" class="mapLinks"><i class="iconSideBar fas fa-gas-pump"></i> S.A.S.I.S.O.P.A</h2>
+    <h2 class="mapLinks"><i class="iconSideBar fas fa-tachometer-alt"></i> SGM</h2>
+    <h2 class="mapLinks"><i class="iconSideBar fas fa-book"></i> C.R.E</h2>
+    <h2 class="mapLinks"><i class="iconSideBar fas fa-chalkboard-teacher"></i> Procedimientos</h2>
+    <h2 class="mapLinks"><i class="iconSideBar fas fa-users"></i> Organigrama</h2>
+    <h2 class="mapLinks"><i class="iconSideBar fas fa-calendar-alt"></i> Calendario</h2>
+</div>
+
+<section id="datos">
+    <div>
+        <img [src]="station.logo" height="125px" width="250px">
+        <h2>{{station.razonSocial}}</h2>  
+    </div>
+    <div id="datosGrl">
+        <h3>Dirección:</h3>
+        <p> <strong>Calle:</strong> {{station.ubicacion.direccion.calle}} <strong>No.</strong> {{station.ubicacion.direccion.numExt}}</p>
+        <p> <strong>Colonia:</strong> {{station.ubicacion.direccion.colonia}} </p>
+        <p> {{station.ubicacion.direccion.delMun}}, {{station.ubicacion.direccion.estado}} </p>
+    </div>   
+</section>
+
+<section>
+    
+</section>

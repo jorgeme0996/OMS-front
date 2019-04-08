@@ -1,23 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MapService } from '../../services/map.service';
+
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css']
 })
-export class MapComponent {
+export class MapComponent implements OnInit {
 
   latitude = 20.155750;
   longitude = -100.557466; 
   zoom = 5; 
 
-  markers = [
-    { latitude: 20.589653, longitude: -100.389526 },
-    { latitude: 20.586222, longitude: -100.388849},
-    { latitude: 19.418090, longitude: -99.174638},
-    {latitude: 19.420073, longitude: -99.176440},
-    {latitude: 21.143755, longitude: -86.823113}
-  ];
+  markers = [];
   
   showSideBar = false;
   showBurgerBar = true;
@@ -201,5 +198,27 @@ export class MapComponent {
     }
   ]
   
-  constructor() { }
+  constructor(private router: Router, private map: MapService) { }
+
+  ngOnInit() {
+    this.getMarkers();
+  }
+
+  logout(){
+    localStorage.removeItem('Auth');
+    this.router.navigate(['/'])
+  }
+
+  getMarkers(){
+    this.map.getCoord()
+      .subscribe((data:any)=>{
+        this.markers = data.coordenadas;
+        console.log(this.markers);
+      })
+  }
+
+  goToMenu(id){
+    this.router.navigate(['/menu', id])
+  }
+
 }

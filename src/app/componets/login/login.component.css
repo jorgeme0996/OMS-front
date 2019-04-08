@@ -1,3 +1,7 @@
+form#loginForm {
+    display: flex;
+    flex-direction: column;
+}
 
 div#contLogin{
     display: flex;
@@ -24,9 +28,6 @@ div#login {
   /*background-color: #fefefe;*/
     color: white;
     border-radius: 8px;
-    font-family: Constantia;
-    
-
 }
 
 button#btn-login {
@@ -71,12 +72,6 @@ a:hover {
     cursor: pointer;
 }
 
-
-hr{
-    background-color: gray;
-    color:gray;
-}
-
 .sign-in,
 .sign-up{
 	display:none;
@@ -96,15 +91,4 @@ hr{
  .sign-up:checked + .tab{
 	color:#fff;
 	border-color:#1161ee;
-}
-
- 
-
-.hr{
-	height:2px;
-	margin:60px 0 50px 0;
-	background:rgba(255,255,255,.2);
-}
-.foot-lnk{
-	text-align:center;
 }
