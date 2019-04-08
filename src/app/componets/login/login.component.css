@@ -6,10 +6,8 @@ form#loginForm {
 div#contLogin{
     display: flex;
     justify-content: center;
-    
-    
+        
 }
-
 
 
 div#login {
