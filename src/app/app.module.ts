@@ -12,12 +12,17 @@ import { AuthService } from './services/auth.service';
 // Importar Rutas
 import { ROUTES } from './app.routes';
 
+
 // Importar Componentes
 import { AppComponent } from './app.component';
 import { PermisoCreComponent } from './componets/shared/permiso-cre/permiso-cre.component';
 import { MapComponent } from './componets/map/map.component';
 import { NotFoundComponent } from './componets/shared/not-found/not-found.component';
 import { LoginComponent } from './componets/login/login.component';
+import { CalendatrComponent } from './componets/calendatr/calendatr.component';
+import { from } from 'rxjs';
+import { NomIneriorPipe } from './pipes/nom-inerior.pipe';
+
 import { SasisopaMenuComponent } from './componets/shared/sasisopa-menu/sasisopa-menu.component';
 import { MenuGasComponent } from './componets/menu-gas/menu-gas.component';
 
@@ -28,6 +33,8 @@ import { MenuGasComponent } from './componets/menu-gas/menu-gas.component';
     MapComponent,
     NotFoundComponent,
     LoginComponent,
+    CalendatrComponent,
+    NomIneriorPipe,
     SasisopaMenuComponent,
     MenuGasComponent
   ],
@@ -36,7 +43,7 @@ import { MenuGasComponent } from './componets/menu-gas/menu-gas.component';
     RouterModule.forRoot(ROUTES, {useHash: true}),
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyBgmI1bWkGcebNPjwZpxSpCQ2yCWDGSJ1I" 
+      apiKey: 'AIzaSyBgmI1bWkGcebNPjwZpxSpCQ2yCWDGSJ1I'
     })
   ],
   providers: [AuthService, AuthGuard],
