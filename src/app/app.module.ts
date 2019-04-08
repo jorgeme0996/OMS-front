@@ -8,12 +8,17 @@ import { AgmCoreModule } from '@agm/core';
 // Importar Rutas
 import { ROUTES } from './app.routes';
 
+
 // Importar Componentes
 import { AppComponent } from './app.component';
 import { PermisoCreComponent } from './componets/shared/permiso-cre/permiso-cre.component';
 import { MapComponent } from './componets/map/map.component';
 import { NotFoundComponent } from './componets/shared/not-found/not-found.component';
 import { LoginComponent } from './componets/login/login.component';
+import { CalendatrComponent } from './componets/calendatr/calendatr.component';
+import { from } from 'rxjs';
+import { NomIneriorPipe } from './pipes/nom-inerior.pipe';
+
 
 @NgModule({
   declarations: [
@@ -21,14 +26,17 @@ import { LoginComponent } from './componets/login/login.component';
     PermisoCreComponent,
     MapComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    CalendatrComponent,
+    NomIneriorPipe,
+    
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES, {useHash: true}),
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyBgmI1bWkGcebNPjwZpxSpCQ2yCWDGSJ1I" 
+      apiKey: 'AIzaSyBgmI1bWkGcebNPjwZpxSpCQ2yCWDGSJ1I'
     })
   ],
   providers: [],

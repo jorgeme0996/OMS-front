@@ -2,13 +2,19 @@
 div#contLogin{
     display: flex;
     justify-content: center;
+    
+    
 }
+
+
 
 div#login {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    max-height: 900px;
+    width: 330px;
+    height: 500px;
+    /*max-width: 400px;
+    max-height: 900px;*/
     justify-content: space-around;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -19,6 +25,8 @@ div#login {
     color: white;
     border-radius: 8px;
     font-family: Constantia;
+    
+
 }
 
 button#btn-login {
@@ -29,21 +37,22 @@ button#btn-login {
     background-color: #004ec4;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 18px;
     border: 2px #296bce solid;
-  text-align: center;
+    text-align: center;
 }
 
 button#btn-login:hover {
     cursor: pointer;
+    font-size: 15px;
     transform: scale(1.1);
 }
 
 input.loginInput {
-    border-radius: 10px;
+    border-radius: 20px;
     padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     border: 2px white solid;
 }
 
@@ -63,3 +72,39 @@ a:hover {
 }
 
 
+hr{
+    background-color: gray;
+    color:gray;
+}
+
+.sign-in,
+.sign-up{
+	display:none;
+} 
+.tab{
+	text-transform:uppercase;
+}
+ .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+ .sign-in:checked + .tab,
+ .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+
+ 
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+}
